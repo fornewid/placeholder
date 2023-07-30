@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Used for loading images from the network -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.Material.Light.NoActionBar"
+        tools:ignore="DataExtractionRules">
+
+        <profileable
+            android:shell="true"
+            tools:targetApi="q" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@android:style/Theme.Material.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".material.PlaceholderBasicSample"
+            android:exported="true"
+            android:label="@string/material_title_basics">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="io.github.fornewid.sample.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".material.PlaceholderFadeSample"
+            android:exported="true"
+            android:label="@string/material_title_fade">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="io.github.fornewid.sample.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".material.PlaceholderShimmerSample"
+            android:exported="true"
+            android:label="@string/material_title_shimmer">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="io.github.fornewid.sample.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".material3.PlaceholderBasicSample"
+            android:exported="true"
+            android:label="@string/material3_title_basics">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="io.github.fornewid.sample.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".material3.PlaceholderFadeSample"
+            android:exported="true"
+            android:label="@string/material3_title_fade">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="io.github.fornewid.sample.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".material3.PlaceholderShimmerSample"
+            android:exported="true"
+            android:label="@string/material3_title_shimmer">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="io.github.fornewid.sample.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

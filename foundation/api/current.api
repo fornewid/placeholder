@@ -1,0 +1,33 @@
+// Signature format: 4.0
+package io.github.fornewid.placeholder.foundation {
+
+  public final class PlaceholderDefaults {
+    method public androidx.compose.animation.core.InfiniteRepeatableSpec<java.lang.Float> getFadeAnimationSpec();
+    method public androidx.compose.animation.core.InfiniteRepeatableSpec<java.lang.Float> getShimmerAnimationSpec();
+    property public final androidx.compose.animation.core.InfiniteRepeatableSpec<java.lang.Float> fadeAnimationSpec;
+    property public final androidx.compose.animation.core.InfiniteRepeatableSpec<java.lang.Float> shimmerAnimationSpec;
+    field public static final io.github.fornewid.placeholder.foundation.PlaceholderDefaults INSTANCE;
+  }
+
+  @androidx.compose.runtime.Stable public interface PlaceholderHighlight {
+    method @FloatRange(from=0.0, to=1.0) public float alpha(float progress);
+    method public androidx.compose.ui.graphics.Brush brush(@FloatRange(from=0.0, to=1.0) float progress, long size);
+    method public androidx.compose.animation.core.InfiniteRepeatableSpec<java.lang.Float>? getAnimationSpec();
+    property public abstract androidx.compose.animation.core.InfiniteRepeatableSpec<java.lang.Float>? animationSpec;
+    field public static final io.github.fornewid.placeholder.foundation.PlaceholderHighlight.Companion Companion;
+  }
+
+  public static final class PlaceholderHighlight.Companion {
+  }
+
+  public final class PlaceholderHighlightKt {
+    method public static io.github.fornewid.placeholder.foundation.PlaceholderHighlight fade(io.github.fornewid.placeholder.foundation.PlaceholderHighlight.Companion, long highlightColor, optional androidx.compose.animation.core.InfiniteRepeatableSpec<java.lang.Float> animationSpec);
+    method public static io.github.fornewid.placeholder.foundation.PlaceholderHighlight shimmer(io.github.fornewid.placeholder.foundation.PlaceholderHighlight.Companion, long highlightColor, optional androidx.compose.animation.core.InfiniteRepeatableSpec<java.lang.Float> animationSpec, optional @FloatRange(from=0.0, to=1.0) float progressForMaxAlpha);
+  }
+
+  public final class PlaceholderKt {
+    method public static androidx.compose.ui.Modifier placeholder(androidx.compose.ui.Modifier, boolean visible, long color, optional androidx.compose.ui.graphics.Shape shape, optional io.github.fornewid.placeholder.foundation.PlaceholderHighlight? highlight, optional kotlin.jvm.functions.Function1<? super androidx.compose.animation.core.Transition.Segment<java.lang.Boolean>,? extends androidx.compose.animation.core.FiniteAnimationSpec<java.lang.Float>> placeholderFadeTransitionSpec, optional kotlin.jvm.functions.Function1<? super androidx.compose.animation.core.Transition.Segment<java.lang.Boolean>,? extends androidx.compose.animation.core.FiniteAnimationSpec<java.lang.Float>> contentFadeTransitionSpec);
+  }
+
+}
+
