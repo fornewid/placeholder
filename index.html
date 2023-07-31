@@ -13,24 +13,22 @@
       
       
       
-        <link rel="prev" href="../placeholder/">
       
+        <link rel="next" href="placeholder/">
       
-        <link rel="next" href="../using-snapshot-version/">
-      
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
     
     
       
-        <title>Migration - Placeholder for Jetpack Compose</title>
+        <title>Placeholder for Jetpack Compose</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.eebd395e.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.eebd395e.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ecc896b0.min.css">
+        <link rel="stylesheet" href="assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -46,7 +44,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -71,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#migrating-from-accompanist" class="md-skip">
+        <a href="#placeholder-for-jetpack-compose" class="md-skip">
           Skip to content
         </a>
       
@@ -87,7 +85,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Placeholder for Jetpack Compose" class="md-header__button md-logo" aria-label="Placeholder for Jetpack Compose" data-md-component="logo">
+    <a href="." title="Placeholder for Jetpack Compose" class="md-header__button md-logo" aria-label="Placeholder for Jetpack Compose" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -106,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Migration
+              Overview
             
           </span>
         </div>
@@ -187,7 +185,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Placeholder for Jetpack Compose" class="md-nav__button md-logo" aria-label="Placeholder for Jetpack Compose" data-md-component="logo">
+    <a href="." title="Placeholder for Jetpack Compose" class="md-nav__button md-logo" aria-label="Placeholder for Jetpack Compose" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -216,11 +214,107 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Overview
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
         Overview
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#compose-versions" class="md-nav__link">
+    Compose versions
+  </a>
+  
+    <nav class="md-nav" aria-label="Compose versions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#placeholder-foundation" class="md-nav__link">
+    Placeholder Foundation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#placeholder-material" class="md-nav__link">
+    Placeholder Material
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#placeholder-material3" class="md-nav__link">
+    Placeholder Material3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snapshots" class="md-nav__link">
+    Snapshots
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributions" class="md-nav__link">
+    Contributions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    License
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -260,7 +354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../placeholder/" class="md-nav__link">
+      <a href="placeholder/" class="md-nav__link">
         Guide
       </a>
     </li>
@@ -274,7 +368,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/foundation/" class="md-nav__link">
+      <a href="api/foundation/" class="md-nav__link">
         Foundation API
       </a>
     </li>
@@ -288,7 +382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/material/" class="md-nav__link">
+      <a href="api/material/" class="md-nav__link">
         Material API
       </a>
     </li>
@@ -302,7 +396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/material3/" class="md-nav__link">
+      <a href="api/material3/" class="md-nav__link">
         Material3 API
       </a>
     </li>
@@ -322,59 +416,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Migration
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="migrating-from-accompanist/" class="md-nav__link">
         Migration
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#migration" class="md-nav__link">
-    Migration
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#migration-table" class="md-nav__link">
-    Migration Table
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -387,7 +433,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../using-snapshot-version/" class="md-nav__link">
+      <a href="using-snapshot-version/" class="md-nav__link">
         Snapshots
       </a>
     </li>
@@ -402,7 +448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/" class="md-nav__link">
+      <a href="contributing/" class="md-nav__link">
         Contributing
       </a>
     </li>
@@ -436,15 +482,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#migration" class="md-nav__link">
-    Migration
+  <a href="#compose-versions" class="md-nav__link">
+    Compose versions
+  </a>
+  
+    <nav class="md-nav" aria-label="Compose versions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#placeholder-foundation" class="md-nav__link">
+    Placeholder Foundation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#placeholder-material" class="md-nav__link">
+    Placeholder Material
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#placeholder-material3" class="md-nav__link">
+    Placeholder Material3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#migration-table" class="md-nav__link">
-    Migration Table
+  <a href="#snapshots" class="md-nav__link">
+    Snapshots
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributions" class="md-nav__link">
+    Contributions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    License
   </a>
   
 </li>
@@ -467,48 +561,53 @@
   
 
 
-<h1 id="migrating-from-accompanist">Migrating from Accompanist<a class="headerlink" href="#migrating-from-accompanist" title="Permanent link">&para;</a></h1>
-<h2 id="migration">Migration<a class="headerlink" href="#migration" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Make sure you are using Compose 1.5.0+ before attempting to migrate to <code>io.github.fornewid.placeholder</code>.</li>
-<li>Change <code>com.google.accompanist.placeholder.PlaceholderDefaults</code> to <code>io.github.fornewid.placeholder.foundation.PlaceholderDefaults</code>.</li>
-<li>Change <code>com.google.accompanist.placeholder.PlaceholderHighlight</code> to <code>io.github.fornewid.placeholder.foundation.PlaceholderHighlight</code>.</li>
-<li>Change any usages of <code>placeholder()</code> to <code>io.github.fornewid.placeholder.*.placeholder()</code></li>
-<li>For more mappings - see the migration table below.</li>
-<li>Run your changes on device and check to see if there are any differences.</li>
-</ol>
-<h2 id="migration-table">Migration Table<a class="headerlink" href="#migration-table" title="Permanent link">&para;</a></h2>
-<p>The following is a mapping of the placeholder classes from accompanist to io.github.fornewid.placeholder:</p>
+<h1 id="placeholder-for-jetpack-compose">Placeholder for Jetpack Compose<a class="headerlink" href="#placeholder-for-jetpack-compose" title="Permanent link">&para;</a></h1>
+<p><a href="https://github.com/fornewid/placeholder/actions/workflows/build.yaml"><img src="https://github.com/fornewid/placeholder/actions/workflows/build.yaml/badge.svg"/></a>
+<a href="https://opensource.org/licenses/Apache-2.0"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
+<a href='https://developer.android.com'><img src='http://img.shields.io/badge/platform-android-green.svg'/></a></p>
+<p>A library which provides a <a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/Modifier">modifier</a> for display 'placeholder' UI while content is loading.</p>
+<p>The codes are copied from <a href="https://github.com/google/accompanist">accompanist</a> placeholder.
+If you're already using <a href="https://github.com/google/accompanist">accompanist</a> placeholder, you can migrate by referring to <a href="docs/migrating-from-accompanist.md">the migration guide</a>.</p>
+<h2 id="compose-versions">Compose versions<a class="headerlink" href="#compose-versions" title="Permanent link">&para;</a></h2>
 <table>
-<thead>
-<tr>
-<th>accompanist/placeholder</th>
-<th>androidx.compose.foundation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>com.google.accompanist.placeholder.PlaceholderDefaults</code></td>
-<td><code>io.github.fornewid.placeholder.foundation.PlaceholderDefaults</code></td>
-</tr>
-<tr>
-<td><code>com.google.accompanist.placeholder.PlaceholderHighlight</code></td>
-<td><code>io.github.fornewid.placeholder.foundation.PlaceholderHighlight</code></td>
-</tr>
-<tr>
-<td><code>com.google.accompanist.placeholder.*</code></td>
-<td><code>io.github.fornewid.placeholder.foundation.*</code></td>
-</tr>
-<tr>
-<td><code>com.google.accompanist.placeholder.material.*</code></td>
-<td><code>io.github.fornewid.placeholder.material.*</code></td>
-</tr>
-<tr>
-<td><code>com.google.accompanist.placeholder.material3.*</code></td>
-<td><code>io.github.fornewid.placeholder.material3.*</code></td>
-</tr>
-</tbody>
+ <tr>
+  <td>Older versions</td><td>Use <a href='https://github.com/google/accompanist'>accompanist/placeholder</a></td>
+ </tr>
+ <tr>
+  <td>Compose 1.5 (1.5.x)</td><td><img alt="Maven Central" src="https://img.shields.io/maven-central/v/io.github.fornewid/placeholder-foundation"></td>
+ </tr>
 </table>
+
+<h3 id="placeholder-foundation"><a href="./foundation/">Placeholder Foundation</a><a class="headerlink" href="#placeholder-foundation" title="Permanent link">&para;</a></h3>
+<p>A library that provides easy-to-use modifiers for displaying a placeholder UI while content is loading.</p>
+<h3 id="placeholder-material"><a href="./material/">Placeholder Material</a><a class="headerlink" href="#placeholder-material" title="Permanent link">&para;</a></h3>
+<p>A library that provides easy-to-use modifiers for displaying a placeholder UI on Material theme.</p>
+<h3 id="placeholder-material3"><a href="./material3/">Placeholder Material3</a><a class="headerlink" href="#placeholder-material3" title="Permanent link">&para;</a></h3>
+<p>A library that provides easy-to-use modifiers for displaying a placeholder UI on Material3 theme.</p>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">repositories</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="n">mavenCentral</span><span class="o">()</span>
+<span class="o">}</span>
+
+<span class="n">dependencies</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="c1">// If you&#39;re using Material, use placeholder-material</span>
+<span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="s2">&quot;io.github.fornewid:placeholder-material:&lt;version&gt;&quot;</span>
+
+<span class="w">    </span><span class="c1">// If you&#39;re using Material3, use placeholder-material3</span>
+<span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="s2">&quot;io.github.fornewid:placeholder-material3:&lt;version&gt;&quot;</span>
+
+<span class="w">    </span><span class="c1">// Otherwise use the foundation version</span>
+<span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="s2">&quot;io.github.fornewid:placeholder-foundation:&lt;version&gt;&quot;</span>
+<span class="o">}</span>
+</code></pre></div>
+<h2 id="snapshots">Snapshots<a class="headerlink" href="#snapshots" title="Permanent link">&para;</a></h2>
+<p>Snapshots of the current development version of Placeholder are available, which track the latest commit.
+See <a href="docs/using-snapshot-version.md">here</a> for more information.</p>
+<h2 id="contributions">Contributions<a class="headerlink" href="#contributions" title="Permanent link">&para;</a></h2>
+<p>Please contribute! We will gladly review any pull requests.
+Make sure to read the <a href="CONTRIBUTING.md">Contributing</a> page first though.</p>
+<h2 id="license">License<a class="headerlink" href="#license" title="Permanent link">&para;</a></h2>
+<p>Licensed under the Apache 2.0 license. See <a href="LICENSE">LICENSE</a> for details.</p>
 
 
 
@@ -546,10 +645,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.220ee61c.min.js"></script>
+      <script src="assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
   </body>

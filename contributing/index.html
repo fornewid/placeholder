@@ -13,17 +13,15 @@
       
       
       
-        <link rel="prev" href="../placeholder/">
+        <link rel="prev" href="../using-snapshot-version/">
       
-      
-        <link rel="next" href="../using-snapshot-version/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
     
     
       
-        <title>Migration - Placeholder for Jetpack Compose</title>
+        <title>Contributing - Placeholder for Jetpack Compose</title>
       
     
     
@@ -71,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#migrating-from-accompanist" class="md-skip">
+        <a href="#how-to-contribute" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Migration
+              Contributing
             
           </span>
         </div>
@@ -322,59 +320,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Migration
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../migrating-from-accompanist/" class="md-nav__link">
         Migration
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#migration" class="md-nav__link">
-    Migration
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#migration-table" class="md-nav__link">
-    Migration Table
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -400,11 +350,73 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../contributing/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Contributing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Contributing
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#new-featureslibraries" class="md-nav__link">
+    New Features/Libraries
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-reviews" class="md-nav__link">
+    Code Reviews
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-changes" class="md-nav__link">
+    API Changes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatting" class="md-nav__link">
+    Formatting
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -436,15 +448,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#migration" class="md-nav__link">
-    Migration
+  <a href="#new-featureslibraries" class="md-nav__link">
+    New Features/Libraries
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#migration-table" class="md-nav__link">
-    Migration Table
+  <a href="#code-reviews" class="md-nav__link">
+    Code Reviews
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-changes" class="md-nav__link">
+    API Changes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatting" class="md-nav__link">
+    Formatting
   </a>
   
 </li>
@@ -467,48 +493,22 @@
   
 
 
-<h1 id="migrating-from-accompanist">Migrating from Accompanist<a class="headerlink" href="#migrating-from-accompanist" title="Permanent link">&para;</a></h1>
-<h2 id="migration">Migration<a class="headerlink" href="#migration" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Make sure you are using Compose 1.5.0+ before attempting to migrate to <code>io.github.fornewid.placeholder</code>.</li>
-<li>Change <code>com.google.accompanist.placeholder.PlaceholderDefaults</code> to <code>io.github.fornewid.placeholder.foundation.PlaceholderDefaults</code>.</li>
-<li>Change <code>com.google.accompanist.placeholder.PlaceholderHighlight</code> to <code>io.github.fornewid.placeholder.foundation.PlaceholderHighlight</code>.</li>
-<li>Change any usages of <code>placeholder()</code> to <code>io.github.fornewid.placeholder.*.placeholder()</code></li>
-<li>For more mappings - see the migration table below.</li>
-<li>Run your changes on device and check to see if there are any differences.</li>
-</ol>
-<h2 id="migration-table">Migration Table<a class="headerlink" href="#migration-table" title="Permanent link">&para;</a></h2>
-<p>The following is a mapping of the placeholder classes from accompanist to io.github.fornewid.placeholder:</p>
-<table>
-<thead>
-<tr>
-<th>accompanist/placeholder</th>
-<th>androidx.compose.foundation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>com.google.accompanist.placeholder.PlaceholderDefaults</code></td>
-<td><code>io.github.fornewid.placeholder.foundation.PlaceholderDefaults</code></td>
-</tr>
-<tr>
-<td><code>com.google.accompanist.placeholder.PlaceholderHighlight</code></td>
-<td><code>io.github.fornewid.placeholder.foundation.PlaceholderHighlight</code></td>
-</tr>
-<tr>
-<td><code>com.google.accompanist.placeholder.*</code></td>
-<td><code>io.github.fornewid.placeholder.foundation.*</code></td>
-</tr>
-<tr>
-<td><code>com.google.accompanist.placeholder.material.*</code></td>
-<td><code>io.github.fornewid.placeholder.material.*</code></td>
-</tr>
-<tr>
-<td><code>com.google.accompanist.placeholder.material3.*</code></td>
-<td><code>io.github.fornewid.placeholder.material3.*</code></td>
-</tr>
-</tbody>
-</table>
+<h1 id="how-to-contribute">How to Contribute<a class="headerlink" href="#how-to-contribute" title="Permanent link">&para;</a></h1>
+<p>We'd love to accept your patches and contributions to this project.
+There are just a few small guidelines you need to follow.</p>
+<h2 id="new-featureslibraries">New Features/Libraries<a class="headerlink" href="#new-featureslibraries" title="Permanent link">&para;</a></h2>
+<p>Before contributing large new features and/or libraries please start a discussion with us first via GitHub Issues and check that we can support it.
+We are unable to support all new features, even though we wish we could!
+If we are unable to support adding your feature, we always encourage you to open source it in your own repository to help the Compose community grow.</p>
+<h2 id="code-reviews">Code Reviews<a class="headerlink" href="#code-reviews" title="Permanent link">&para;</a></h2>
+<p>All submissions, including submissions by project members, require review.
+We use GitHub pull requests for this purpose.
+Consult <a href="https://help.github.com/articles/about-pull-requests/">GitHub Help</a> for more information on using pull requests.</p>
+<h2 id="api-changes">API Changes<a class="headerlink" href="#api-changes" title="Permanent link">&para;</a></h2>
+<p>If you are changing any public APIs, you need to run <code>./gradlew metalavaGenerateSignatureRelease</code> which will update the API signatures.</p>
+<h2 id="formatting">Formatting<a class="headerlink" href="#formatting" title="Permanent link">&para;</a></h2>
+<p>To apply formatting, we use spotless.
+Run <code>./gradlew spotlessApply</code> to format the code according to the spec.</p>
 
 
 
