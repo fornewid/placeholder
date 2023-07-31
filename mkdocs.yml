@@ -22,7 +22,7 @@ nav:
 # Configuration
 theme:
   name: material
-  language: 'en"
+  language: 'en'
   palette:
     primary: 'black'
     accent: 'deep orange'
