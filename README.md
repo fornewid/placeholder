@@ -7,7 +7,7 @@
 A library which provides a [modifier][modifier] for display 'placeholder' UI while content is loading.
 
 The codes are copied from [accompanist][accompanist] placeholder.
-If you're already using [accompanist][accompanist] placeholder, you can migrate by referring to [the migration guide][migration].
+If you're already using [accompanist][accompanist] placeholder, you can migrate by referring to [the migration guide](docs/migrating-from-accompanist.md).
 
 ## Compose versions
 
@@ -31,6 +31,30 @@ A library that provides easy-to-use modifiers for displaying a placeholder UI on
 ### [Placeholder Material3](./material3/)
 
 A library that provides easy-to-use modifiers for displaying a placeholder UI on Material3 theme.
+
+## Usage
+
+``` groovy
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // If you're using Material, use placeholder-material
+    implementation "io.github.fornewid:placeholder-material:<version>"
+
+    // If you're using Material3, use placeholder-material3
+    implementation "io.github.fornewid:placeholder-material3:<version>"
+
+    // Otherwise use the foundation version
+    implementation "io.github.fornewid:placeholder-foundation:<version>"
+}
+```
+
+## Snapshots
+
+Snapshots of the current development version of Placeholder are available, which track the latest commit.
+See [here](docs/using-snapshot-version.md) for more information.
 
 ## Contributions
 
