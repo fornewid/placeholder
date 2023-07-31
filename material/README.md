@@ -2,7 +2,7 @@
 
 [![Maven Central](https://img.shields.io/maven-central/v/io.github.fornewid/placeholder-material)](https://search.maven.org/search?q=g:io.github.fornewid%20placeholder)
 
-For more information, visit the documentation: https://fornewid.github.io/placeholder/material
+For more information, visit the documentation: https://fornewid.github.io/placeholder
 
 ## Download
 

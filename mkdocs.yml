@@ -1,0 +1,46 @@
+site_name: "Placeholder for Jetpack Compose"
+site_description: "A library that provides easy-to-use compose modifiers for displaying a placeholder UI while content is loading."
+site_author: "fornewid"
+remote_branch: gh-pages
+
+# Repository
+repo_name: fornewid/placeholder
+repo_url: https://github.com/fornewid/placeholder
+
+# Navigation
+nav:
+  - 'Overview': index.md
+  - 'Placeholder':
+      - 'Guide': placeholder.md
+      - 'Foundation API': api/foundation/
+      - 'Material API': api/material/
+      - 'Material3 API': api/material3/
+  - 'Migration': migrating-from-accompanist.md
+  - 'Snapshots': using-snapshot-version.md
+  - 'Contributing': contributing.md
+
+# Configuration
+theme:
+  name: material
+  language: 'en"
+  palette:
+    primary: 'black'
+    accent: 'deep orange'
+  font:
+    text: 'Roboto'
+    code: 'JetBrains Mono'
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - attr_list
+  - codehilite:
+      guess_lang: false
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.betterem
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details

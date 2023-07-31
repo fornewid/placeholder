@@ -33,6 +33,19 @@ At the most basic usage, the modifier will draw a shape over your composable con
     )
     ```
 
+=== "Placeholder Material3"
+
+    ``` kotlin
+    import io.github.fornewid.placeholder.material3.placeholder
+
+    Text(
+        text = "Content to display after content has loaded",
+        modifier = Modifier
+            .padding(16.dp)
+            .placeholder(visible = true)
+    )
+    ```
+
 === "Placeholder Foundation"
 
     ``` kotlin
@@ -73,6 +86,24 @@ This highlight fades a color over the entire placeholder in and out.
     import io.github.fornewid.placeholder.PlaceholderHighlight
     import io.github.fornewid.placeholder.material.placeholder
     import io.github.fornewid.placeholder.material.fade
+
+    Text(
+        text = "Content to display after content has loaded",
+        modifier = Modifier
+            .padding(16.dp)
+            .placeholder(
+                visible = true,
+                highlight = PlaceholderHighlight.fade(),
+            )
+    )
+    ```
+
+=== "Placeholder Material3"
+
+    ``` kotlin
+    import io.github.fornewid.placeholder.PlaceholderHighlight
+    import io.github.fornewid.placeholder.material3.placeholder
+    import io.github.fornewid.placeholder.material3.fade
 
     Text(
         text = "Content to display after content has loaded",
@@ -138,6 +169,24 @@ This displays a gradient shimmer effect which emanates from the top-start corner
     )
     ```
 
+=== "Placeholder Material3"
+
+    ``` kotlin
+    import io.github.fornewid.placeholder.PlaceholderHighlight
+    import io.github.fornewid.placeholder.material3.placeholder
+    import io.github.fornewid.placeholder.material3.shimmer
+
+    Text(
+        text = "Content to display after content has loaded",
+        modifier = Modifier
+            .padding(16.dp)
+            .placeholder(
+                visible = true,
+                highlight = PlaceholderHighlight.shimmer(),
+            )
+    )
+    ```
+
 === "Placeholder Foundation"
 
     ``` kotlin
@@ -171,6 +220,9 @@ repositories {
 dependencies {
     // If you're using Material, use placeholder-material
     implementation "io.github.fornewid:placeholder-material:<version>"
+
+    // If you're using Material3, use placeholder-material3
+    implementation "io.github.fornewid:placeholder-material3:<version>"
 
     // Otherwise use the foundation version
     implementation "io.github.fornewid:placeholder-foundation:<version>"
