@@ -22,4 +22,4 @@ If you are changing any public APIs, you need to run `./gradlew metalavaGenerate
 ## Formatting 
 
 To apply formatting, we use spotless.
-Run `./gradlew :spotlessApply` to format the code according to the spec.
+Run `./gradlew spotlessApply` to format the code according to the spec.
