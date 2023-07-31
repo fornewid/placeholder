@@ -1,0 +1,9 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+
+module:foundation
+io.github.fornewid.placeholder.foundation
+module:material
+io.github.fornewid.placeholder.material
+module:material3
+io.github.fornewid.placeholder.material3
