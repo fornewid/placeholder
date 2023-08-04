@@ -22,15 +22,15 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.ExperimentalMaterialApi
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Scaffold
-import androidx.compose.material.Text
-import androidx.compose.material.TopAppBar
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDownward
 import androidx.compose.material.pullrefresh.PullRefreshIndicator
 import androidx.compose.material.pullrefresh.pullRefresh
 import androidx.compose.material.pullrefresh.rememberPullRefreshState
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -46,7 +46,6 @@ import coil.compose.rememberImagePainter
 import io.github.fornewid.placeholder.foundation.PlaceholderHighlight
 import io.github.fornewid.placeholder.material3.fade
 import io.github.fornewid.placeholder.material3.placeholder
-import io.github.fornewid.placeholder.sample.ListItem
 import io.github.fornewid.placeholder.sample.R
 import io.github.fornewid.placeholder.sample.randomSampleImageUrl
 import kotlinx.coroutines.delay
@@ -63,14 +62,13 @@ class PlaceholderFadeSample : ComponentActivity() {
     }
 }
 
-@OptIn(ExperimentalCoilApi::class, ExperimentalMaterialApi::class)
+@OptIn(ExperimentalCoilApi::class, ExperimentalMaterialApi::class, ExperimentalMaterial3Api::class)
 @Composable
 private fun Sample() {
     Scaffold(
         topBar = {
             TopAppBar(
                 title = { Text(stringResource(R.string.material3_title_fade)) },
-                backgroundColor = MaterialTheme.colors.surface,
             )
         },
         modifier = Modifier.fillMaxSize()
@@ -94,7 +92,7 @@ private fun Sample() {
             LazyColumn(contentPadding = padding) {
                 if (refreshing.not()) {
                     item {
-                        ListItem(
+                        HeaderItem(
                             painter = rememberVectorPainter(Icons.Default.ArrowDownward),
                             text = "Pull down"
                         )
@@ -104,7 +102,7 @@ private fun Sample() {
                     ListItem(
                         painter = rememberImagePainter(randomSampleImageUrl(index)),
                         text = "Text",
-                        // We're using the modifier provided by placeholder-material which
+                        // We're using the modifier provided by placeholder-material3 which
                         // uses good default values for the color
                         childModifier = Modifier.placeholder(
                             visible = refreshing,
