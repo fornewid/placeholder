@@ -29,6 +29,36 @@
         </activity>
 
         <activity
+            android:name=".foundation.PlaceholderBasicSample"
+            android:exported="true"
+            android:label="@string/foundation_title_basics">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="io.github.fornewid.sample.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".foundation.PlaceholderFadeSample"
+            android:exported="true"
+            android:label="@string/foundation_title_fade">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="io.github.fornewid.sample.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".foundation.PlaceholderShimmerSample"
+            android:exported="true"
+            android:label="@string/foundation_title_shimmer">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="io.github.fornewid.sample.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
             android:name=".material.PlaceholderBasicSample"
             android:exported="true"
             android:label="@string/material_title_basics">

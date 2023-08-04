@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.github.fornewid.placeholder.sample.material
+package io.github.fornewid.placeholder.sample.foundation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -21,6 +21,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
@@ -39,18 +40,20 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
 import coil.annotation.ExperimentalCoilApi
 import coil.compose.rememberImagePainter
-import io.github.fornewid.placeholder.foundation.PlaceholderHighlight
-import io.github.fornewid.placeholder.material.placeholder
-import io.github.fornewid.placeholder.material.shimmer
+import io.github.fornewid.placeholder.foundation.placeholder
 import io.github.fornewid.placeholder.sample.R
+import io.github.fornewid.placeholder.sample.material.HeaderItem
+import io.github.fornewid.placeholder.sample.material.ListItem
 import io.github.fornewid.placeholder.sample.randomSampleImageUrl
 import kotlinx.coroutines.delay
 
-class PlaceholderShimmerSample : ComponentActivity() {
+class PlaceholderBasicSample : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -68,7 +71,7 @@ private fun Sample() {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(stringResource(R.string.material_title_shimmer)) },
+                title = { Text(stringResource(R.string.foundation_title_basics)) },
                 backgroundColor = MaterialTheme.colors.surface,
             )
         },
@@ -79,7 +82,7 @@ private fun Sample() {
         var refreshing by remember { mutableStateOf(false) }
         LaunchedEffect(refreshing) {
             if (refreshing) {
-                delay(4000)
+                delay(2000)
                 refreshing = false
             }
         }
@@ -103,11 +106,12 @@ private fun Sample() {
                     ListItem(
                         painter = rememberImagePainter(randomSampleImageUrl(index)),
                         text = "Text",
-                        // We're using the modifier provided by placeholder-material which
+                        // We're using the modifier provided by placeholder-foundation which
                         // uses good default values for the color
                         childModifier = Modifier.placeholder(
                             visible = refreshing,
-                            highlight = PlaceholderHighlight.shimmer(),
+                            color = Color.Black.copy(alpha = 0.1f),
+                            shape = RoundedCornerShape(4.dp),
                         )
                     )
                 }

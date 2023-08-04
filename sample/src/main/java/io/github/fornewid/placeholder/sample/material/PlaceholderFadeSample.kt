@@ -46,7 +46,6 @@ import coil.compose.rememberImagePainter
 import io.github.fornewid.placeholder.foundation.PlaceholderHighlight
 import io.github.fornewid.placeholder.material.fade
 import io.github.fornewid.placeholder.material.placeholder
-import io.github.fornewid.placeholder.sample.ListItem
 import io.github.fornewid.placeholder.sample.R
 import io.github.fornewid.placeholder.sample.randomSampleImageUrl
 import kotlinx.coroutines.delay
@@ -94,7 +93,7 @@ private fun Sample() {
             LazyColumn(contentPadding = padding) {
                 if (refreshing.not()) {
                     item {
-                        ListItem(
+                        HeaderItem(
                             painter = rememberVectorPainter(Icons.Default.ArrowDownward),
                             text = "Pull down"
                         )
