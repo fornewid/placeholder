@@ -8,5 +8,7 @@ set -ex
 cp README.md docs/index.md
 cp CONTRIBUTING.md docs/contributing.md
 
+sed -i.bak 's/CONTRIBUTING.md/contributing/' docs/index.md
+
 # Finally delete all of the backup files
 find . -name '*.bak' -delete
