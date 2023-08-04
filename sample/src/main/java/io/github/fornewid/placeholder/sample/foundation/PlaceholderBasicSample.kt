@@ -47,9 +47,9 @@ import androidx.compose.ui.unit.dp
 import coil.annotation.ExperimentalCoilApi
 import coil.compose.rememberImagePainter
 import io.github.fornewid.placeholder.foundation.placeholder
+import io.github.fornewid.placeholder.sample.R
 import io.github.fornewid.placeholder.sample.material.HeaderItem
 import io.github.fornewid.placeholder.sample.material.ListItem
-import io.github.fornewid.placeholder.sample.R
 import io.github.fornewid.placeholder.sample.randomSampleImageUrl
 import kotlinx.coroutines.delay
 

@@ -49,9 +49,9 @@ import coil.compose.rememberImagePainter
 import io.github.fornewid.placeholder.foundation.PlaceholderHighlight
 import io.github.fornewid.placeholder.foundation.fade
 import io.github.fornewid.placeholder.foundation.placeholder
+import io.github.fornewid.placeholder.sample.R
 import io.github.fornewid.placeholder.sample.material.HeaderItem
 import io.github.fornewid.placeholder.sample.material.ListItem
-import io.github.fornewid.placeholder.sample.R
 import io.github.fornewid.placeholder.sample.randomSampleImageUrl
 import kotlinx.coroutines.delay
 
