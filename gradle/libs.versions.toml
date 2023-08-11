@@ -1,8 +1,8 @@
 [versions]
 
-compose = "1.5.0-rc01"
+compose = "1.5.0"
 composeCompiler = "1.4.8"
-composeMaterial3 = "1.0.1"
+composeMaterial3 = "1.1.1"
 
 dokka = "1.8.10"
 
@@ -32,19 +32,12 @@ compose-material-iconsext = { module = "androidx.compose.material:material-icons
 compose-material3-material3 = { module = "androidx.compose.material3:material3", version.ref = "composeMaterial3" }
 compose-animation-animation = { module = "androidx.compose.animation:animation", version.ref = "compose" }
 
-snapper = "dev.chrisbanes.snapper:snapper:0.2.2"
-
 android-gradlePlugin = { module = "com.android.tools.build:gradle", version.ref = "gradlePlugin" }
 gradleMavenPublishPlugin = { module = "com.vanniktech:gradle-maven-publish-plugin", version.ref = "vanniktechPublish" }
 metalavaGradle = { module = "me.tylerbwong.gradle.metalava:plugin", version.ref = "metalava" }
 
-glide = "com.github.bumptech.glide:glide:4.12.0"
-
 kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
-kotlin-stdlibJdk8 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "kotlin" }
 kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
-kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
-kotlin-metadataJvm = "org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.3.0"
 
 kotlin-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
 kotlin-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
