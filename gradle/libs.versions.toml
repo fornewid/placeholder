@@ -1,6 +1,6 @@
 [versions]
 
-compose = "1.5.0"
+compose = "1.6.0-alpha03"
 composeCompiler = "1.4.8"
 composeMaterial3 = "1.1.1"
 
