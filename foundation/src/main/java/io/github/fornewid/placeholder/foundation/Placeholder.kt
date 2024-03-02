@@ -28,7 +28,7 @@ import androidx.compose.animation.core.tween
 import androidx.compose.animation.core.updateTransition
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
@@ -124,7 +124,7 @@ public fun Modifier.placeholder(
     val lastOutline = remember { Ref<Outline>() }
 
     // The current highlight animation progress
-    var highlightProgress: Float by remember { mutableStateOf(0f) }
+    var highlightProgress: Float by remember { mutableFloatStateOf(0f) }
 
     // This is our crossfade transition
     val transitionState = remember { MutableTransitionState(visible) }.apply {
@@ -146,11 +146,12 @@ public fun Modifier.placeholder(
     // Run the optional animation spec and update the progress if the placeholder is visible
     val animationSpec = highlight?.animationSpec
     if (animationSpec != null && (visible || placeholderAlpha >= 0.01f)) {
-        val infiniteTransition = rememberInfiniteTransition()
+        val infiniteTransition = rememberInfiniteTransition(label = "highlight transition")
         highlightProgress = infiniteTransition.animateFloat(
             initialValue = 0f,
             targetValue = 1f,
             animationSpec = animationSpec,
+            label = "highlight progress animation",
         ).value
     }
 
