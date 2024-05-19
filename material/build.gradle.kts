@@ -1,6 +1,6 @@
 plugins {
-    alias(libs.plugins.android.library)
-    alias(libs.plugins.kotlin.android)
+    id("placeholder.android.library")
+    id("placeholder.android.compose")
     alias(libs.plugins.jetbrains.dokka)
     alias(libs.plugins.metalava)
     alias(libs.plugins.maven.publish)
@@ -13,27 +13,8 @@ kotlin {
 android {
     namespace = "io.github.fornewid.placeholder.material"
 
-    compileSdk = 34
-
-    defaultConfig {
-        minSdk = 21
-        // targetSdkVersion has no effect for libraries. This is only used for the test APK
-        targetSdk = 33
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-    }
-
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-
     buildFeatures {
         buildConfig = false
-        compose = true
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
     }
 
     lint {

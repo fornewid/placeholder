@@ -1,35 +1,16 @@
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
+    id("placeholder.android.application")
+    id("placeholder.android.compose")
 }
 
 android {
     namespace = "io.github.fornewid.placeholder.sample"
 
-    compileSdk = 34
-
     defaultConfig {
         applicationId = "io.github.fornewid.placeholder.sample"
-        minSdk = 21
-        targetSdk = 33
 
         versionCode = 1
         versionName = "1.0"
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-    }
-
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-
-    buildFeatures {
-        compose = true
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
     }
 
     buildTypes {
