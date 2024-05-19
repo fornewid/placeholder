@@ -40,7 +40,7 @@ class MainActivity : ListActivity() {
             getData(intent.getStringExtra(EXTRA_PATH)),
             android.R.layout.simple_list_item_1,
             arrayOf("title"),
-            intArrayOf(android.R.id.text1)
+            intArrayOf(android.R.id.text1),
         )
 
         listView.isTextFilterEnabled = true
@@ -80,8 +80,8 @@ class MainActivity : ListActivity() {
                         name = nextLabel,
                         intent = activityIntent(
                             info.activityInfo.applicationInfo.packageName,
-                            info.activityInfo.name
-                        )
+                            info.activityInfo.name,
+                        ),
                     )
                 } else {
                     if (entries[nextLabel] == null) {
@@ -89,8 +89,8 @@ class MainActivity : ListActivity() {
                             data = myData,
                             name = nextLabel,
                             intent = browseIntent(
-                                if (prefix == "") nextLabel else "$prefix/$nextLabel"
-                            )
+                                if (prefix == "") nextLabel else "$prefix/$nextLabel",
+                            ),
                         )
                         entries[nextLabel] = true
                     }

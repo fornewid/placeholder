@@ -45,7 +45,7 @@ public interface PlaceholderHighlight {
      */
     public fun brush(
         @FloatRange(from = 0.0, to = 1.0) progress: Float,
-        size: Size
+        size: Size,
     ): Brush
 
     /**
@@ -133,7 +133,7 @@ private data class Shimmer(
             lerp(
                 start = 0f,
                 stop = 1f,
-                fraction = progress / progressForMaxAlpha
+                fraction = progress / progressForMaxAlpha,
             )
         }
         // From ProgressForOpaqueAlpha..1f we animate from 1..0
@@ -141,7 +141,7 @@ private data class Shimmer(
             lerp(
                 start = 1f,
                 stop = 0f,
-                fraction = (progress - progressForMaxAlpha) / (1f - progressForMaxAlpha)
+                fraction = (progress - progressForMaxAlpha) / (1f - progressForMaxAlpha),
             )
         }
     }

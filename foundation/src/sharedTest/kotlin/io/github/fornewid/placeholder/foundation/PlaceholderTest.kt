@@ -84,7 +84,7 @@ class PlaceholderTest {
                     .size(128.dp)
                     .background(color = Color.Black)
                     .placeholder(visible = visible, color = Color.Red)
-                    .testTag(contentTag)
+                    .testTag(contentTag),
             )
         }
 
@@ -119,9 +119,9 @@ class PlaceholderTest {
                     .placeholder(
                         visible = visible,
                         color = Color.Gray,
-                        highlight = Solid(Color.Red)
+                        highlight = Solid(Color.Red),
                     )
-                    .testTag(contentTag)
+                    .testTag(contentTag),
             )
         }
 
@@ -154,7 +154,7 @@ class PlaceholderTest {
                     .size(128.dp)
                     .background(color = Color.Black)
                     .placeholder(visible = true, color = color)
-                    .testTag(contentTag)
+                    .testTag(contentTag),
             )
         }
 
@@ -189,9 +189,9 @@ class PlaceholderTest {
                     .placeholder(
                         visible = true,
                         color = Color.Gray,
-                        highlight = animatedBrush
+                        highlight = animatedBrush,
                     )
-                    .testTag(contentTag)
+                    .testTag(contentTag),
             )
         }
 
@@ -226,9 +226,9 @@ class PlaceholderTest {
                     .placeholder(
                         visible = true,
                         color = Color.Red,
-                        shape = shape
+                        shape = shape,
                     )
-                    .testTag(contentTag)
+                    .testTag(contentTag),
             )
         }
 
@@ -266,9 +266,9 @@ class PlaceholderTest {
                         visible = true,
                         color = Color.Gray,
                         highlight = Solid(Color.Red),
-                        shape = shape
+                        shape = shape,
                     )
-                    .testTag(contentTag)
+                    .testTag(contentTag),
             )
         }
 
@@ -306,7 +306,7 @@ class PlaceholderTest {
             ValueElement("visible", true),
             ValueElement("color", Color.Blue),
             ValueElement("highlight", highlight),
-            ValueElement("shape", RectangleShape)
+            ValueElement("shape", RectangleShape),
         )
     }
 
@@ -325,7 +325,7 @@ class PlaceholderTest {
             ValueElement("visible", true),
             ValueElement("color", Color.Blue),
             ValueElement("highlight", highlight),
-            ValueElement("shape", RectangleShape)
+            ValueElement("shape", RectangleShape),
         )
     }
 }
@@ -334,8 +334,8 @@ internal class Solid(
     private val color: Color,
     override val animationSpec: InfiniteRepeatableSpec<Float> = infiniteRepeatable(
         animation = tween(delayMillis = 0, durationMillis = 500),
-        repeatMode = RepeatMode.Restart
-    )
+        repeatMode = RepeatMode.Restart,
+    ),
 ) : PlaceholderHighlight {
     override fun alpha(progress: Float): Float = 1f
 

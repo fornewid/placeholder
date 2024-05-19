@@ -55,7 +55,7 @@ fun HeaderItem(
             style = MaterialTheme.typography.titleSmall,
             modifier = Modifier
                 .weight(1f)
-                .align(Alignment.CenterVertically)
+                .align(Alignment.CenterVertically),
         )
     }
 }
@@ -86,7 +86,7 @@ fun ListItem(
             style = MaterialTheme.typography.titleSmall,
             modifier = childModifier
                 .weight(1f)
-                .align(Alignment.CenterVertically)
+                .align(Alignment.CenterVertically),
         )
     }
 }

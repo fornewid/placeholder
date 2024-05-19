@@ -69,7 +69,7 @@ private fun Sample() {
                 title = { Text(stringResource(R.string.material3_title_basics)) },
             )
         },
-        modifier = Modifier.fillMaxSize()
+        modifier = Modifier.fillMaxSize(),
     ) { padding ->
         // Simulate a fake 2-second 'load'. Ideally this 'refreshing' value would
         // come from a ViewModel or similar
@@ -83,7 +83,7 @@ private fun Sample() {
 
         val state = rememberPullRefreshState(
             refreshing = refreshing,
-            onRefresh = { refreshing = true }
+            onRefresh = { refreshing = true },
         )
 
         Box(Modifier.pullRefresh(state)) {
@@ -92,7 +92,7 @@ private fun Sample() {
                     item {
                         HeaderItem(
                             painter = rememberVectorPainter(Icons.Default.ArrowDownward),
-                            text = "Pull down"
+                            text = "Pull down",
                         )
                     }
                 }
@@ -102,7 +102,7 @@ private fun Sample() {
                         text = "Text",
                         // We're using the modifier provided by placeholder-material3 which
                         // uses good default values for the color
-                        childModifier = Modifier.placeholder(visible = refreshing)
+                        childModifier = Modifier.placeholder(visible = refreshing),
                     )
                 }
             }
@@ -110,7 +110,7 @@ private fun Sample() {
             PullRefreshIndicator(
                 refreshing = refreshing,
                 state = state,
-                modifier = Modifier.align(Alignment.TopCenter)
+                modifier = Modifier.align(Alignment.TopCenter),
             )
         }
     }
