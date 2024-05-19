@@ -93,9 +93,6 @@ jobs:
           API_LEVEL: ${{ matrix.api-level }}
         run: |
           TARGET="default"
-          if [ "$API_LEVEL" -ge "28" ]; then
-            TARGET="google_apis"
-          fi
           echo "TARGET=$TARGET" >> $GITHUB_OUTPUT
 
       - name: Determine emulator arch
