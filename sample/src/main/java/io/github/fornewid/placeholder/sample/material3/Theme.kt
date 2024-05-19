@@ -24,10 +24,10 @@ import androidx.compose.runtime.Composable
 @Composable
 fun SampleTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    content: @Composable () -> Unit
+    content: @Composable () -> Unit,
 ) {
     MaterialTheme(
         colorScheme = if (darkTheme) darkColorScheme() else lightColorScheme(),
-        content = content
+        content = content,
     )
 }

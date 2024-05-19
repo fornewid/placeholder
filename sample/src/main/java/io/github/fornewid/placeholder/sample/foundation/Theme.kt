@@ -20,9 +20,9 @@ import androidx.compose.runtime.Composable
 
 @Composable
 fun SampleTheme(
-    content: @Composable () -> Unit
+    content: @Composable () -> Unit,
 ) {
     MaterialTheme(
-        content = content
+        content = content,
     )
 }

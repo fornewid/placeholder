@@ -38,7 +38,7 @@ fun DocSample_Foundation_Placeholder() {
                 color = Color.Gray,
                 // optional, defaults to RectangleShape
                 shape = RoundedCornerShape(4.dp),
-            )
+            ),
     )
 }
 
@@ -56,7 +56,7 @@ fun DocSample_Foundation_PlaceholderFade() {
                 highlight = PlaceholderHighlight.fade(
                     highlightColor = Color.White,
                 ),
-            )
+            ),
     )
 }
 
@@ -74,6 +74,6 @@ fun DocSample_Foundation_PlaceholderShimmer() {
                 highlight = PlaceholderHighlight.shimmer(
                     highlightColor = Color.White,
                 ),
-            )
+            ),
     )
 }

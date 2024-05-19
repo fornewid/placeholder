@@ -75,7 +75,7 @@ private fun Sample() {
                 backgroundColor = MaterialTheme.colors.surface,
             )
         },
-        modifier = Modifier.fillMaxSize()
+        modifier = Modifier.fillMaxSize(),
     ) { padding ->
         // Simulate a fake 2-second 'load'. Ideally this 'refreshing' value would
         // come from a ViewModel or similar
@@ -89,7 +89,7 @@ private fun Sample() {
 
         val state = rememberPullRefreshState(
             refreshing = refreshing,
-            onRefresh = { refreshing = true }
+            onRefresh = { refreshing = true },
         )
 
         Box(Modifier.pullRefresh(state)) {
@@ -98,7 +98,7 @@ private fun Sample() {
                     item {
                         HeaderItem(
                             painter = rememberVectorPainter(Icons.Default.ArrowDownward),
-                            text = "Pull down"
+                            text = "Pull down",
                         )
                     }
                 }
@@ -112,7 +112,7 @@ private fun Sample() {
                             visible = refreshing,
                             color = Color.Black.copy(alpha = 0.1f),
                             shape = RoundedCornerShape(4.dp),
-                        )
+                        ),
                     )
                 }
             }
@@ -120,7 +120,7 @@ private fun Sample() {
             PullRefreshIndicator(
                 refreshing = refreshing,
                 state = state,
-                modifier = Modifier.align(Alignment.TopCenter)
+                modifier = Modifier.align(Alignment.TopCenter),
             )
         }
     }

@@ -31,7 +31,7 @@ fun DocSample_Material_Placeholder() {
         text = "Content to display after content has loaded",
         modifier = Modifier
             .padding(16.dp)
-            .placeholder(visible = true)
+            .placeholder(visible = true),
     )
 }
 
@@ -44,7 +44,7 @@ fun DocSample_Material_PlaceholderFade() {
             .placeholder(
                 visible = true,
                 highlight = PlaceholderHighlight.fade(),
-            )
+            ),
     )
 }
 
@@ -57,6 +57,6 @@ fun DocSample_Material_PlaceholderShimmer() {
             .placeholder(
                 visible = true,
                 highlight = PlaceholderHighlight.shimmer(),
-            )
+            ),
     )
 }
