@@ -13,15 +13,6 @@ tasks.withType(org.jetbrains.dokka.gradle.DokkaMultiModuleTask).configureEach {
 }
 
 subprojects {
-    tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach { compile ->
-        kotlinOptions {
-            // Set JVM target to 1.8
-            jvmTarget = "1.8"
-            // Allow use of @OptIn
-            freeCompilerArgs += "-opt-in=kotlin.RequiresOptIn"
-        }
-    }
-
     // Read in the signing.properties file if it is exists
     def signingPropsFile = rootProject.file('release/signing.properties')
     if (signingPropsFile.exists()) {
