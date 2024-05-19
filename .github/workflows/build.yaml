@@ -57,10 +57,9 @@ jobs:
     timeout-minutes: 70
 
     strategy:
-      # Allow tests to continue on other devices if they fail on one device.
-      fail-fast: false
+      fail-fast: true
       matrix:
-        api-level: [ 22, 26, 29 ]
+        api-level: [ 22, 26, 31 ]
 
     env:
       TERM: dumb
@@ -101,7 +100,7 @@ jobs:
           API_LEVEL: ${{ matrix.api-level }}
         run: |
           ARCH="x86"
-          if [ "$API_LEVEL" -ge "31" ]; then
+          if [ "$API_LEVEL" -ge "30" ]; then
             ARCH="x86_64"
           fi
           echo "ARCH=$ARCH" >> $GITHUB_OUTPUT
@@ -115,10 +114,7 @@ jobs:
           api-level: ${{ matrix.api-level }}
           arch: ${{ steps.determine-arch.outputs.ARCH }}
           target: ${{ steps.determine-target.outputs.TARGET }}
-          profile: Galaxy Nexus
-          script: |
-            adb logcat > logcat.txt &
-            ./gradlew --scan connectedCheck
+          script: ./gradlew connectedDebugAndroidTest
 
       - name: Clean secrets
         if: always()
