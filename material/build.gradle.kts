@@ -1,9 +1,9 @@
 plugins {
-    id(libs.plugins.android.library.get().pluginId)
-    id(libs.plugins.android.kotlin.get().pluginId)
-    id(libs.plugins.jetbrains.dokka.get().pluginId)
-    id(libs.plugins.gradle.metalava.get().pluginId)
-    id(libs.plugins.vanniktech.maven.publish.get().pluginId)
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.jetbrains.dokka)
+    alias(libs.plugins.metalava)
+    alias(libs.plugins.maven.publish)
 }
 
 kotlin {
