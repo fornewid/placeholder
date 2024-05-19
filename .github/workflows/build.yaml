@@ -60,7 +60,7 @@ jobs:
       # Allow tests to continue on other devices if they fail on one device.
       fail-fast: false
       matrix:
-        api-level: [ 22, 26, 31 ]
+        api-level: [ 22, 26, 29 ]
 
     env:
       TERM: dumb
@@ -129,17 +129,19 @@ jobs:
 
       - name: Upload logs
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
-          name: logs-${{ matrix.api-level }}
+          name: logs-${{ matrix.api-level }}-${{ steps.determine-target.outputs.TARGET }}
           path: logcat.txt
 
       - name: Upload test results
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
-          name: test-results-${{ matrix.api-level }}
-          path: "**/build/outputs/*/connected/*.xml"
+          name: test-results-${{ matrix.api-level }}-${{ steps.determine-target.outputs.TARGET }}
+          path: |
+            **/build/reports/*
+            **/build/outputs/*/connected/*
 
   deploy:
     if: github.event_name == 'push'
