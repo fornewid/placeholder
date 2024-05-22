@@ -1,6 +1,7 @@
 plugins {
     id("placeholder.android.application")
     id("placeholder.android.compose")
+    alias(libs.plugins.dependencyGuard)
 }
 
 android {
@@ -40,4 +41,9 @@ dependencies {
     implementation(libs.androidx.core)
 
     implementation(libs.coil.compose)
+}
+
+dependencyGuard {
+    // All dependencies included in Production Release APK
+    configuration("releaseRuntimeClasspath")
 }
