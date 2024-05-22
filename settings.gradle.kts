@@ -19,6 +19,6 @@ include(":internal-testutils")
 include(":foundation")
 include(":material")
 include(":material3")
-include(":sample")
+include(":sample:android")
 
 rootProject.name = "placeholder"
