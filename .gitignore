@@ -20,6 +20,7 @@ captures
 .idea/androidTestResultsUserPreferences.xml
 .idea/appInsightsSettings.xml
 .idea/kotlinc.xml
+.idea/studiobot.xml
 gradle.xml
 *.iml
 

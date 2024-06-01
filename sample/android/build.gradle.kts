@@ -22,9 +22,9 @@ android {
 }
 
 dependencies {
-    implementation(project(":foundation"))
-    implementation(project(":material"))
-    implementation(project(":material3"))
+    implementation(projects.foundation)
+    implementation(projects.material)
+    implementation(projects.material3)
 
     implementation(libs.kotlin.stdlib)
     implementation(libs.kotlin.coroutines.android)

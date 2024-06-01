@@ -15,6 +15,8 @@ dependencyResolutionManagement {
     }
 }
 
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
 include(":internal-testutils")
 include(":foundation")
 include(":material")
