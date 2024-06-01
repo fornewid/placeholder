@@ -1,8 +1,8 @@
 [versions]
 
-compose = "1.6.2"
+compose = "1.6.7"
 compose-compiler = "1.4.8"
-compose-material3 = "1.2.0"
+compose-material3 = "1.2.1"
 
 dokka = "1.8.10"
 
@@ -19,7 +19,6 @@ vanniktechPublish = "0.25.2"
 dependencyGuard = "0.5.0"
 
 [libraries]
-compose-ui-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
 compose-ui-util = { module = "androidx.compose.ui:ui-util", version.ref = "compose" }
 compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
 compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
@@ -30,7 +29,6 @@ compose-foundation-layout = { module = "androidx.compose.foundation:foundation-l
 compose-material-material = { module = "androidx.compose.material:material", version.ref = "compose" }
 compose-material-iconsext = { module = "androidx.compose.material:material-icons-extended", version.ref = "compose" }
 compose-material3-material3 = { module = "androidx.compose.material3:material3", version.ref = "compose-material3" }
-compose-animation-animation = { module = "androidx.compose.animation:animation", version.ref = "compose" }
 
 metalavaGradle = { module = "me.tylerbwong.gradle.metalava:plugin", version.ref = "metalava" }
 
