@@ -10,7 +10,11 @@ agp = "8.4.1"
 
 kotlin = "1.8.22"
 coroutines = "1.6.4"
+
 coil = "1.3.2"
+
+androidx-core = "1.13.1"
+androidx-activity = "1.9.0"
 
 androidx-test-core = "1.5.0"
 androidx-test-runner = "1.5.2"
@@ -40,8 +44,8 @@ kotlin-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines
 
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
 
-androidx-core = "androidx.core:core-ktx:1.8.0"
-androidx-activity-compose = "androidx.activity:activity-compose:1.7.2"
+androidx-core = { module = "androidx.core:core-ktx", version.ref = "androidx-core" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity" }
 
 androidx-test-core = { module = "androidx.test:core-ktx", version.ref="androidx-test-core" }
 androidx-test-runner = { module = "androidx.test:runner", version.ref = "androidx-test-runner" }
