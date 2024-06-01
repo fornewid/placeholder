@@ -49,7 +49,7 @@ metalava {
 
 dependencies {
     implementation(libs.compose.material.material)
-    api(project(":foundation"))
+    api(projects.foundation)
 
     // ======================
     // Test dependencies
