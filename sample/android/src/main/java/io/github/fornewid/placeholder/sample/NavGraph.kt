@@ -30,92 +30,68 @@ import io.github.fornewid.placeholder.sample.material.PlaceholderMaterialShimmer
 import io.github.fornewid.placeholder.sample.material3.PlaceholderMaterial3BasicSample
 import io.github.fornewid.placeholder.sample.material3.PlaceholderMaterial3FadeSample
 import io.github.fornewid.placeholder.sample.material3.PlaceholderMaterial3ShimmerSample
-import kotlinx.serialization.Serializable
 
-sealed interface Destination {
-
-    @Serializable
-    object Home : Destination
-
-    @Serializable
-    object PlaceholderFoundationBasic : Destination
-
-    @Serializable
-    object PlaceholderFoundationFade : Destination
-
-    @Serializable
-    object PlaceholderFoundationShimmer : Destination
-
-    @Serializable
-    object PlaceholderMaterialBasic : Destination
-
-    @Serializable
-    object PlaceholderMaterialFade : Destination
-
-    @Serializable
-    object PlaceholderMaterialShimmer : Destination
-
-    @Serializable
-    object PlaceholderMaterial3Basic : Destination
-
-    @Serializable
-    object PlaceholderMaterial3Fade : Destination
-
-    @Serializable
-    object PlaceholderMaterial3Shimmer : Destination
+sealed class Destination(val route: String) {
+    object Home : Destination("Home")
+    object PlaceholderFoundationBasic : Destination("PlaceholderFoundationBasic")
+    object PlaceholderFoundationFade : Destination("PlaceholderFoundationFade")
+    object PlaceholderFoundationShimmer : Destination("PlaceholderFoundationShimmer")
+    object PlaceholderMaterialBasic : Destination("PlaceholderMaterialBasic")
+    object PlaceholderMaterialFade : Destination("PlaceholderMaterialFade")
+    object PlaceholderMaterialShimmer : Destination("PlaceholderMaterialShimmer")
+    object PlaceholderMaterial3Basic : Destination("PlaceholderMaterial3Basic")
+    object PlaceholderMaterial3Fade : Destination("PlaceholderMaterial3Fade")
+    object PlaceholderMaterial3Shimmer : Destination("PlaceholderMaterial3Shimmer")
 }
 
 @Composable
 fun NavGraph(
-    startDestination: Destination = Destination.Home,
+    startDestination: String = Destination.Home.route,
 ) {
     val navController = rememberNavController()
-    val upPress: () -> Unit = {
-        navController.navigateUp()
-    }
     NavHost(
         navController = navController,
         startDestination = startDestination,
         modifier = Modifier.fillMaxSize(),
     ) {
-        composable<Destination.Home> {
+        composable(Destination.Home.route) {
             HomeScreen(
                 onItemClick = {
-                    navController.navigate(route = it)
+                    navController.navigate(route = it.route)
                 },
             )
         }
 
         // foundation
-        composable<Destination.PlaceholderFoundationBasic> {
+        composable(Destination.PlaceholderFoundationBasic.route) {
             PlaceholderBasicSample()
         }
-        composable<Destination.PlaceholderFoundationFade> {
+        composable(Destination.PlaceholderFoundationFade.route) {
             PlaceholderFadeSample()
         }
-        composable<Destination.PlaceholderFoundationShimmer> {
+        composable(Destination.PlaceholderFoundationShimmer.route) {
             PlaceholderShimmerSample()
         }
 
         // material
-        composable<Destination.PlaceholderMaterialBasic> {
+        composable(Destination.PlaceholderMaterialBasic.route) {
             PlaceholderMaterialBasicSample()
         }
-        composable<Destination.PlaceholderMaterialFade> {
+        composable(Destination.PlaceholderMaterialFade.route) {
             PlaceholderMaterialFadeSample()
         }
-        composable<Destination.PlaceholderMaterialShimmer> {
+        composable(Destination.PlaceholderMaterialShimmer.route) {
             PlaceholderMaterialShimmerSample()
         }
 
         // material3
-        composable<Destination.PlaceholderMaterial3Basic> {
+        composable(Destination.PlaceholderMaterial3Basic.route) {
             PlaceholderMaterial3BasicSample()
         }
-        composable<Destination.PlaceholderMaterial3Fade> {
+        composable(Destination.PlaceholderMaterial3Fade.route) {
             PlaceholderMaterial3FadeSample()
         }
-        composable<Destination.PlaceholderMaterial3Shimmer> {
+        composable(Destination.PlaceholderMaterial3Shimmer.route) {
             PlaceholderMaterial3ShimmerSample()
         }
     }
