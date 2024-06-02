@@ -15,9 +15,6 @@
  */
 package io.github.fornewid.placeholder.sample.material3
 
-import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyColumn
@@ -44,21 +41,16 @@ import androidx.compose.ui.res.stringResource
 import coil.annotation.ExperimentalCoilApi
 import coil.compose.rememberImagePainter
 import io.github.fornewid.placeholder.foundation.PlaceholderHighlight
+import io.github.fornewid.placeholder.material3.fade
 import io.github.fornewid.placeholder.material3.placeholder
-import io.github.fornewid.placeholder.material3.shimmer
 import io.github.fornewid.placeholder.sample.R
 import io.github.fornewid.placeholder.sample.randomSampleImageUrl
 import kotlinx.coroutines.delay
 
-class PlaceholderShimmerSample : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        setContent {
-            SampleTheme {
-                Sample()
-            }
-        }
+@Composable
+fun PlaceholderMaterial3FadeSample() {
+    SampleTheme {
+        Sample()
     }
 }
 
@@ -68,7 +60,7 @@ private fun Sample() {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(stringResource(R.string.material3_title_shimmer)) },
+                title = { Text(stringResource(R.string.material3_title_fade)) },
             )
         },
         modifier = Modifier.fillMaxSize(),
@@ -106,7 +98,7 @@ private fun Sample() {
                         // uses good default values for the color
                         childModifier = Modifier.placeholder(
                             visible = refreshing,
-                            highlight = PlaceholderHighlight.shimmer(),
+                            highlight = PlaceholderHighlight.fade(),
                         ),
                     )
                 }
