@@ -27,7 +27,7 @@ dependencies {
     implementation(projects.material3)
 
     implementation(libs.kotlin.stdlib)
-    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.kotlinx.coroutines.core)
 
     implementation(libs.compose.material.material)
     implementation(libs.compose.material.iconsext)
