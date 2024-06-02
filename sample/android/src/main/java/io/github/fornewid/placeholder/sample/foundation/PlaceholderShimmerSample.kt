@@ -15,9 +15,6 @@
  */
 package io.github.fornewid.placeholder.sample.foundation
 
-import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyColumn
@@ -55,15 +52,10 @@ import io.github.fornewid.placeholder.sample.material.ListItem
 import io.github.fornewid.placeholder.sample.randomSampleImageUrl
 import kotlinx.coroutines.delay
 
-class PlaceholderShimmerSample : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        setContent {
-            SampleTheme {
-                Sample()
-            }
-        }
+@Composable
+fun PlaceholderShimmerSample() {
+    SampleTheme {
+        Sample()
     }
 }
 

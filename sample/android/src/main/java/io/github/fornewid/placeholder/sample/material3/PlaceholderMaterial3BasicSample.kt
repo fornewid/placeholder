@@ -13,24 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.github.fornewid.placeholder.sample.material
+package io.github.fornewid.placeholder.sample.material3
 
-import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.ExperimentalMaterialApi
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Scaffold
-import androidx.compose.material.Text
-import androidx.compose.material.TopAppBar
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDownward
 import androidx.compose.material.pullrefresh.PullRefreshIndicator
 import androidx.compose.material.pullrefresh.pullRefresh
 import androidx.compose.material.pullrefresh.rememberPullRefreshState
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -43,33 +40,25 @@ import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.res.stringResource
 import coil.annotation.ExperimentalCoilApi
 import coil.compose.rememberImagePainter
-import io.github.fornewid.placeholder.foundation.PlaceholderHighlight
-import io.github.fornewid.placeholder.material.fade
-import io.github.fornewid.placeholder.material.placeholder
+import io.github.fornewid.placeholder.material3.placeholder
 import io.github.fornewid.placeholder.sample.R
 import io.github.fornewid.placeholder.sample.randomSampleImageUrl
 import kotlinx.coroutines.delay
 
-class PlaceholderFadeSample : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        setContent {
-            SampleTheme {
-                Sample()
-            }
-        }
+@Composable
+fun PlaceholderMaterial3BasicSample() {
+    SampleTheme {
+        Sample()
     }
 }
 
-@OptIn(ExperimentalCoilApi::class, ExperimentalMaterialApi::class)
+@OptIn(ExperimentalCoilApi::class, ExperimentalMaterialApi::class, ExperimentalMaterial3Api::class)
 @Composable
 private fun Sample() {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(stringResource(R.string.material_title_fade)) },
-                backgroundColor = MaterialTheme.colors.surface,
+                title = { Text(stringResource(R.string.material3_title_basics)) },
             )
         },
         modifier = Modifier.fillMaxSize(),
@@ -79,7 +68,7 @@ private fun Sample() {
         var refreshing by remember { mutableStateOf(false) }
         LaunchedEffect(refreshing) {
             if (refreshing) {
-                delay(4000)
+                delay(2000)
                 refreshing = false
             }
         }
@@ -103,12 +92,9 @@ private fun Sample() {
                     ListItem(
                         painter = rememberImagePainter(randomSampleImageUrl(index)),
                         text = "Text",
-                        // We're using the modifier provided by placeholder-material which
+                        // We're using the modifier provided by placeholder-material3 which
                         // uses good default values for the color
-                        childModifier = Modifier.placeholder(
-                            visible = refreshing,
-                            highlight = PlaceholderHighlight.fade(),
-                        ),
+                        childModifier = Modifier.placeholder(visible = refreshing),
                     )
                 }
             }

@@ -15,9 +15,6 @@
  */
 package io.github.fornewid.placeholder.sample.material
 
-import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyColumn
@@ -43,20 +40,17 @@ import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.res.stringResource
 import coil.annotation.ExperimentalCoilApi
 import coil.compose.rememberImagePainter
+import io.github.fornewid.placeholder.foundation.PlaceholderHighlight
+import io.github.fornewid.placeholder.material.fade
 import io.github.fornewid.placeholder.material.placeholder
 import io.github.fornewid.placeholder.sample.R
 import io.github.fornewid.placeholder.sample.randomSampleImageUrl
 import kotlinx.coroutines.delay
 
-class PlaceholderBasicSample : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        setContent {
-            SampleTheme {
-                Sample()
-            }
-        }
+@Composable
+fun PlaceholderMaterialFadeSample() {
+    SampleTheme {
+        Sample()
     }
 }
 
@@ -66,7 +60,7 @@ private fun Sample() {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(stringResource(R.string.material_title_basics)) },
+                title = { Text(stringResource(R.string.material_title_fade)) },
                 backgroundColor = MaterialTheme.colors.surface,
             )
         },
@@ -77,7 +71,7 @@ private fun Sample() {
         var refreshing by remember { mutableStateOf(false) }
         LaunchedEffect(refreshing) {
             if (refreshing) {
-                delay(2000)
+                delay(4000)
                 refreshing = false
             }
         }
@@ -103,7 +97,10 @@ private fun Sample() {
                         text = "Text",
                         // We're using the modifier provided by placeholder-material which
                         // uses good default values for the color
-                        childModifier = Modifier.placeholder(visible = refreshing),
+                        childModifier = Modifier.placeholder(
+                            visible = refreshing,
+                            highlight = PlaceholderHighlight.fade(),
+                        ),
                     )
                 }
             }

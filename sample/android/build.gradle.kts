@@ -1,6 +1,7 @@
 plugins {
     id("placeholder.android.application")
     id("placeholder.android.compose")
+    alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.dependencyGuard)
 }
 
@@ -27,7 +28,8 @@ dependencies {
     implementation(projects.material3)
 
     implementation(libs.kotlin.stdlib)
-    implementation(libs.kotlin.coroutines.android)
+    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.kotlinx.serialization.json)
 
     implementation(libs.compose.material.material)
     implementation(libs.compose.material.iconsext)
@@ -38,7 +40,7 @@ dependencies {
     implementation(libs.compose.ui.util)
 
     implementation(libs.androidx.activity.compose)
-    implementation(libs.androidx.core)
+    implementation(libs.androidx.navigation.compose)
 
     implementation(libs.coil.compose)
 }
