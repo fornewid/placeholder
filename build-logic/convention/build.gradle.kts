@@ -25,9 +25,17 @@ gradlePlugin {
             id = "placeholder.android.library"
             implementationClass = "AndroidLibraryConventionPlugin"
         }
-        register("androidCompose") {
-            id = "placeholder.android.compose"
-            implementationClass = "AndroidComposeConventionPlugin"
+        register("kotlinAndroid") {
+            id = "placeholder.kotlin.android"
+            implementationClass = "KotlinAndroidConventionPlugin"
+        }
+        register("kotlinMultiplatform") {
+            id = "placeholder.kotlin.multiplatform"
+            implementationClass = "KotlinMultiplatformConventionPlugin"
+        }
+        register("compose") {
+            id = "placeholder.compose"
+            implementationClass = "ComposeMultiplatformConventionPlugin"
         }
     }
 }

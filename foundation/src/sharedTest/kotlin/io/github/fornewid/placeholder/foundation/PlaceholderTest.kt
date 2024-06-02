@@ -46,8 +46,8 @@ import androidx.compose.ui.unit.dp
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SdkSuppress
 import com.google.common.truth.Truth.assertThat
-import io.github.fornewid.foundation.internal.test.IgnoreOnRobolectric
-import io.github.fornewid.foundation.internal.test.assertPixels
+import io.github.fornewid.placeholder.internal.test.IgnoreOnRobolectric
+import io.github.fornewid.placeholder.internal.test.assertPixels
 import org.junit.After
 import org.junit.Before
 import org.junit.Rule

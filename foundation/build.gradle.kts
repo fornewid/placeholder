@@ -1,6 +1,7 @@
 plugins {
     id("placeholder.android.library")
-    id("placeholder.android.compose")
+    id("placeholder.kotlin.multiplatform")
+    id("placeholder.compose")
     alias(libs.plugins.jetbrains.dokka)
     alias(libs.plugins.metalava)
     alias(libs.plugins.maven.publish)
@@ -8,30 +9,36 @@ plugins {
 
 kotlin {
     explicitApi()
+    sourceSets {
+        commonMain.dependencies {
+            implementation(compose.foundation)
+            implementation(compose.uiUtil)
+            implementation(libs.androidx.annotation)
+        }
+        val sharedTest by creating {
+            dependencies {
+                implementation(projects.internalTestutils)
+                implementation(libs.junit)
+                implementation(libs.truth)
+                implementation(libs.compose.ui.test.junit4)
+                implementation(libs.compose.ui.test.manifest)
+                implementation(libs.androidx.test.runner)
+            }
+        }
+        androidUnitTest {
+            dependsOn(sharedTest)
+            dependencies {
+                implementation(libs.robolectric)
+            }
+        }
+        androidInstrumentedTest {
+            dependsOn(sharedTest)
+        }
+    }
 }
 
 android {
     namespace = "io.github.fornewid.placeholder.foundation"
-
-    buildFeatures {
-        buildConfig = false
-    }
-
-    lint {
-        textReport = true
-        textOutput = File("stdout")
-        // We run a full lint analysis as build part in CI, so skip vital checks for assemble tasks
-        checkReleaseBuilds = false
-        disable += setOf("GradleOverrides")
-    }
-
-    packaging {
-        // Some of the META-INF files conflict with coroutines-test. Exclude them to enable
-        // our test APK to build (has no effect on our AARs)
-        resources {
-            excludes += listOf("/META-INF/AL2.0", "/META-INF/LGPL2.1")
-        }
-    }
 
     testOptions {
         unitTests {
@@ -61,33 +68,4 @@ metalava {
     sourcePaths.setFrom("src/main")
     filename.set("api/current.api")
     reportLintsAsErrors.set(true)
-}
-
-dependencies {
-    implementation(libs.compose.foundation.foundation)
-    implementation(libs.compose.ui.util)
-
-    // ======================
-    // Test dependencies
-    // ======================
-
-    androidTestImplementation(projects.internalTestutils)
-    testImplementation(projects.internalTestutils)
-
-    androidTestImplementation(libs.junit)
-    testImplementation(libs.junit)
-
-    androidTestImplementation(libs.truth)
-    testImplementation(libs.truth)
-
-    androidTestImplementation(libs.compose.ui.test.junit4)
-    testImplementation(libs.compose.ui.test.junit4)
-
-    androidTestImplementation(libs.compose.ui.test.manifest)
-    testImplementation(libs.compose.ui.test.manifest)
-
-    androidTestImplementation(libs.androidx.test.runner)
-    testImplementation(libs.androidx.test.runner)
-
-    testImplementation(libs.robolectric)
 }

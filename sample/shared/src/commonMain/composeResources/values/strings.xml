@@ -1,0 +1,15 @@
+<resources>
+    <string name="home">Placeholder</string>
+
+    <string name="foundation_title_basics">Placeholder Foundation: Basic</string>
+    <string name="foundation_title_fade">Placeholder Foundation: Fade</string>
+    <string name="foundation_title_shimmer">Placeholder Foundation: Shimmer</string>
+
+    <string name="material_title_basics">Placeholder Material: Basic</string>
+    <string name="material_title_fade">Placeholder Material: Fade</string>
+    <string name="material_title_shimmer">Placeholder Material: Shimmer</string>
+
+    <string name="material3_title_basics">Placeholder Material3: Basic</string>
+    <string name="material3_title_fade">Placeholder Material3: Fade</string>
+    <string name="material3_title_shimmer">Placeholder Material3: Shimmer</string>
+</resources>
