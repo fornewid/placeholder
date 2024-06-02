@@ -15,7 +15,18 @@ kotlin {
             implementation(compose.uiUtil)
             implementation(libs.androidx.annotation)
         }
-        val sharedTest by creating {
+        androidUnitTest {
+            dependencies {
+                implementation(projects.internalTestutils)
+                implementation(libs.junit)
+                implementation(libs.truth)
+                implementation(libs.compose.ui.test.junit4)
+                implementation(libs.compose.ui.test.manifest)
+                implementation(libs.androidx.test.runner)
+                implementation(libs.robolectric)
+            }
+        }
+        androidInstrumentedTest {
             dependencies {
                 implementation(projects.internalTestutils)
                 implementation(libs.junit)
@@ -24,15 +35,6 @@ kotlin {
                 implementation(libs.compose.ui.test.manifest)
                 implementation(libs.androidx.test.runner)
             }
-        }
-        androidUnitTest {
-            dependsOn(sharedTest)
-            dependencies {
-                implementation(libs.robolectric)
-            }
-        }
-        androidInstrumentedTest {
-            dependsOn(sharedTest)
         }
     }
 }
