@@ -9,6 +9,17 @@ android {
 }
 
 kotlin {
+    listOf(
+        iosX64(),
+        iosArm64(),
+        iosSimulatorArm64()
+    ).forEach { iosTarget ->
+        iosTarget.binaries.framework {
+            baseName = "Shared"
+            isStatic = true
+        }
+    }
+
     sourceSets {
         commonMain.dependencies {
             implementation(projects.foundation)
@@ -32,8 +43,10 @@ kotlin {
         androidMain.dependencies {
             implementation(libs.kotlinx.coroutines.android)
         }
-        jvmMain.dependencies {
-            implementation(libs.kotlinx.coroutines.swing)
+        jvmMain {
+            dependencies {
+                implementation(libs.kotlinx.coroutines.swing)
+            }
         }
     }
 }
