@@ -43,13 +43,11 @@ import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.unit.dp
 import coil3.compose.rememberAsyncImagePainter
 import io.github.fornewid.placeholder.foundation.placeholder
+import io.github.fornewid.placeholder.sample.StringResources
 import io.github.fornewid.placeholder.sample.material.HeaderItem
 import io.github.fornewid.placeholder.sample.material.ListItem
 import io.github.fornewid.placeholder.sample.randomSampleImageUrl
 import kotlinx.coroutines.delay
-import org.jetbrains.compose.resources.stringResource
-import placeholder.sample.shared.generated.resources.Res
-import placeholder.sample.shared.generated.resources.foundation_title_basics
 
 @Composable
 fun PlaceholderBasicSample() {
@@ -64,7 +62,7 @@ private fun Sample() {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(stringResource(Res.string.foundation_title_basics)) },
+                title = { Text(StringResources.foundation_title_basics) },
                 backgroundColor = MaterialTheme.colors.surface,
             )
         },

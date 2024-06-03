@@ -40,11 +40,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import coil3.compose.rememberAsyncImagePainter
 import io.github.fornewid.placeholder.material.placeholder
+import io.github.fornewid.placeholder.sample.StringResources
 import io.github.fornewid.placeholder.sample.randomSampleImageUrl
 import kotlinx.coroutines.delay
-import org.jetbrains.compose.resources.stringResource
-import placeholder.sample.shared.generated.resources.Res
-import placeholder.sample.shared.generated.resources.material_title_basics
 
 @Composable
 fun PlaceholderMaterialBasicSample() {
@@ -59,7 +57,7 @@ private fun Sample() {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(stringResource(Res.string.material_title_basics)) },
+                title = { Text(StringResources.material_title_basics) },
                 backgroundColor = MaterialTheme.colors.surface,
             )
         },

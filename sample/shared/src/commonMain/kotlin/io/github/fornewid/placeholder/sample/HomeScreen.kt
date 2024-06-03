@@ -32,18 +32,6 @@ import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import org.jetbrains.compose.resources.stringResource
-import placeholder.sample.shared.generated.resources.Res
-import placeholder.sample.shared.generated.resources.foundation_title_basics
-import placeholder.sample.shared.generated.resources.foundation_title_fade
-import placeholder.sample.shared.generated.resources.foundation_title_shimmer
-import placeholder.sample.shared.generated.resources.home
-import placeholder.sample.shared.generated.resources.material3_title_basics
-import placeholder.sample.shared.generated.resources.material3_title_fade
-import placeholder.sample.shared.generated.resources.material3_title_shimmer
-import placeholder.sample.shared.generated.resources.material_title_basics
-import placeholder.sample.shared.generated.resources.material_title_fade
-import placeholder.sample.shared.generated.resources.material_title_shimmer
 
 private data class Demo(
     val title: String,
@@ -54,39 +42,39 @@ private data class Demo(
 fun HomeScreen(onItemClick: (Destination) -> Unit) {
     val items: List<Demo> = listOf(
         Demo(
-            title = stringResource(Res.string.foundation_title_basics),
+            title = StringResources.foundation_title_basics,
             destination = Destination.PlaceholderFoundationBasic,
         ),
         Demo(
-            title = stringResource(Res.string.foundation_title_fade),
+            title = StringResources.foundation_title_fade,
             destination = Destination.PlaceholderFoundationFade,
         ),
         Demo(
-            title = stringResource(Res.string.foundation_title_shimmer),
+            title = StringResources.foundation_title_shimmer,
             destination = Destination.PlaceholderFoundationShimmer,
         ),
         Demo(
-            title = stringResource(Res.string.material_title_basics),
+            title = StringResources.material_title_basics,
             destination = Destination.PlaceholderMaterialBasic,
         ),
         Demo(
-            title = stringResource(Res.string.material_title_fade),
+            title = StringResources.material_title_fade,
             destination = Destination.PlaceholderMaterialFade,
         ),
         Demo(
-            title = stringResource(Res.string.material_title_shimmer),
+            title = StringResources.material_title_shimmer,
             destination = Destination.PlaceholderMaterialShimmer,
         ),
         Demo(
-            title = stringResource(Res.string.material3_title_basics),
+            title = StringResources.material3_title_basics,
             destination = Destination.PlaceholderMaterial3Basic,
         ),
         Demo(
-            title = stringResource(Res.string.material3_title_fade),
+            title = StringResources.material3_title_fade,
             destination = Destination.PlaceholderMaterial3Fade,
         ),
         Demo(
-            title = stringResource(Res.string.material3_title_shimmer),
+            title = StringResources.material3_title_shimmer,
             destination = Destination.PlaceholderMaterial3Shimmer,
         ),
     )
@@ -94,7 +82,7 @@ fun HomeScreen(onItemClick: (Destination) -> Unit) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(text = stringResource(Res.string.home)) },
+                title = { Text(text = StringResources.home_title) },
                 backgroundColor = MaterialTheme.colors.surface,
             )
         },

@@ -42,11 +42,9 @@ import coil3.compose.rememberAsyncImagePainter
 import io.github.fornewid.placeholder.foundation.PlaceholderHighlight
 import io.github.fornewid.placeholder.material.fade
 import io.github.fornewid.placeholder.material.placeholder
+import io.github.fornewid.placeholder.sample.StringResources
 import io.github.fornewid.placeholder.sample.randomSampleImageUrl
 import kotlinx.coroutines.delay
-import org.jetbrains.compose.resources.stringResource
-import placeholder.sample.shared.generated.resources.Res
-import placeholder.sample.shared.generated.resources.material_title_fade
 
 @Composable
 fun PlaceholderMaterialFadeSample() {
@@ -61,7 +59,7 @@ private fun Sample() {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(stringResource(Res.string.material_title_fade)) },
+                title = { Text(StringResources.material_title_fade) },
                 backgroundColor = MaterialTheme.colors.surface,
             )
         },
