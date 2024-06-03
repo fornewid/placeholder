@@ -42,10 +42,7 @@ jobs:
         run: ./gradlew metalavaCheckCompatibilityRelease --stacktrace
 
       - name: Build samples
-        run: |
-          ./gradlew :sample:android:assemble \
-            :sample:desktop:assemble \
-            :sample:shared:assemble \
+        run: ./gradlew :sample:android:assemble :sample:desktop:assemble
 
       - name: Build iOS app
         run: xcodebuild -project sample/iosApp/iosApp.xcodeproj -scheme iosApp -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest'
