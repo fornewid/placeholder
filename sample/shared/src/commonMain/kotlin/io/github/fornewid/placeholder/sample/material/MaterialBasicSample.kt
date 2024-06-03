@@ -20,12 +20,15 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.ExperimentalMaterialApi
+import androidx.compose.material.Icon
+import androidx.compose.material.IconButton
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDownward
+import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.pullrefresh.PullRefreshIndicator
 import androidx.compose.material.pullrefresh.pullRefresh
 import androidx.compose.material.pullrefresh.rememberPullRefreshState
@@ -45,18 +48,26 @@ import io.github.fornewid.placeholder.sample.randomSampleImageUrl
 import kotlinx.coroutines.delay
 
 @Composable
-fun PlaceholderMaterialBasicSample() {
+fun MaterialBasicSample(upPress: () -> Unit) {
     SampleTheme {
-        Sample()
+        Sample(upPress = upPress)
     }
 }
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
-private fun Sample() {
+private fun Sample(upPress: () -> Unit) {
     Scaffold(
         topBar = {
             TopAppBar(
+                navigationIcon = {
+                    IconButton(onClick = upPress) {
+                        Icon(
+                            Icons.Default.Close,
+                            contentDescription = null,
+                        )
+                    }
+                },
                 title = { Text(StringResources.material_title_basics) },
                 backgroundColor = MaterialTheme.colors.surface,
             )

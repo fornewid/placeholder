@@ -20,8 +20,11 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.ExperimentalMaterialApi
+import androidx.compose.material.Icon
+import androidx.compose.material.IconButton
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDownward
+import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.pullrefresh.PullRefreshIndicator
 import androidx.compose.material.pullrefresh.pullRefresh
 import androidx.compose.material.pullrefresh.rememberPullRefreshState
@@ -40,26 +43,34 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import coil3.compose.rememberAsyncImagePainter
 import io.github.fornewid.placeholder.foundation.PlaceholderHighlight
-import io.github.fornewid.placeholder.material3.fade
 import io.github.fornewid.placeholder.material3.placeholder
+import io.github.fornewid.placeholder.material3.shimmer
 import io.github.fornewid.placeholder.sample.StringResources
 import io.github.fornewid.placeholder.sample.randomSampleImageUrl
 import kotlinx.coroutines.delay
 
 @Composable
-fun PlaceholderMaterial3FadeSample() {
+fun Material3ShimmerSample(upPress: () -> Unit) {
     SampleTheme {
-        Sample()
+        Sample(upPress = upPress)
     }
 }
 
 @OptIn(ExperimentalMaterialApi::class, ExperimentalMaterial3Api::class)
 @Composable
-private fun Sample() {
+private fun Sample(upPress: () -> Unit) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(StringResources.material3_title_fade) },
+                navigationIcon = {
+                    IconButton(onClick = upPress) {
+                        Icon(
+                            Icons.Default.Close,
+                            contentDescription = null,
+                        )
+                    }
+                },
+                title = { Text(StringResources.material3_title_shimmer) },
             )
         },
         modifier = Modifier.fillMaxSize(),
@@ -98,7 +109,7 @@ private fun Sample() {
                         // uses good default values for the color
                         childModifier = Modifier.placeholder(
                             visible = refreshing,
-                            highlight = PlaceholderHighlight.fade(),
+                            highlight = PlaceholderHighlight.shimmer(),
                         ),
                     )
                 }

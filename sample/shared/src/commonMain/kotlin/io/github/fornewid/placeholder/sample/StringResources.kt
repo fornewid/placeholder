@@ -18,15 +18,15 @@ package io.github.fornewid.placeholder.sample
 object StringResources {
     const val home_title: String = "Placeholder"
 
-    const val foundation_title_basics: String = "Placeholder Foundation: Basic"
-    const val foundation_title_fade: String = "Placeholder Foundation: Fade"
-    const val foundation_title_shimmer: String = "Placeholder Foundation: Shimmer"
+    const val foundation_title_basics: String = "Foundation: Basic"
+    const val foundation_title_fade: String = "Foundation: Fade"
+    const val foundation_title_shimmer: String = "Foundation: Shimmer"
 
-    const val material_title_basics: String = "Placeholder Material: Basic"
-    const val material_title_fade: String = "Placeholder Material: Fade"
-    const val material_title_shimmer: String = "Placeholder Material: Shimmer"
+    const val material_title_basics: String = "Material: Basic"
+    const val material_title_fade: String = "Material: Fade"
+    const val material_title_shimmer: String = "Material: Shimmer"
 
-    const val material3_title_basics: String = "Placeholder Material3: Basic"
-    const val material3_title_fade: String = "Placeholder Material3: Fade"
-    const val material3_title_shimmer: String = "Placeholder Material3: Shimmer"
+    const val material3_title_basics: String = "Material3: Basic"
+    const val material3_title_fade: String = "Material3: Fade"
+    const val material3_title_shimmer: String = "Material3: Shimmer"
 }

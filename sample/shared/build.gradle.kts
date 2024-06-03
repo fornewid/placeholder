@@ -53,15 +53,24 @@ kotlin {
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
             implementation(libs.jetbrains.navigation.compose)
+
             implementation(libs.coil.compose)
+            implementation(libs.coil.network.ktor)
+            implementation(libs.ktor.core)
         }
         androidMain.dependencies {
             implementation(libs.kotlinx.coroutines.android)
+            implementation(libs.ktor.cio)
         }
-        jvmMain {
-            dependencies {
-                implementation(libs.kotlinx.coroutines.swing)
-            }
+        jvmMain.dependencies {
+            implementation(libs.kotlinx.coroutines.swing)
+            implementation(libs.ktor.cio)
+        }
+        iosMain.dependencies {
+            implementation(libs.ktor.darwin)
+        }
+        macosMain.dependencies {
+            implementation(libs.ktor.cio)
         }
     }
 }

@@ -43,39 +43,39 @@ fun HomeScreen(onItemClick: (Destination) -> Unit) {
     val items: List<Demo> = listOf(
         Demo(
             title = StringResources.foundation_title_basics,
-            destination = Destination.PlaceholderFoundationBasic,
+            destination = Destination.FoundationBasic,
         ),
         Demo(
             title = StringResources.foundation_title_fade,
-            destination = Destination.PlaceholderFoundationFade,
+            destination = Destination.FoundationFade,
         ),
         Demo(
             title = StringResources.foundation_title_shimmer,
-            destination = Destination.PlaceholderFoundationShimmer,
+            destination = Destination.FoundationShimmer,
         ),
         Demo(
             title = StringResources.material_title_basics,
-            destination = Destination.PlaceholderMaterialBasic,
+            destination = Destination.MaterialBasic,
         ),
         Demo(
             title = StringResources.material_title_fade,
-            destination = Destination.PlaceholderMaterialFade,
+            destination = Destination.MaterialFade,
         ),
         Demo(
             title = StringResources.material_title_shimmer,
-            destination = Destination.PlaceholderMaterialShimmer,
+            destination = Destination.MaterialShimmer,
         ),
         Demo(
             title = StringResources.material3_title_basics,
-            destination = Destination.PlaceholderMaterial3Basic,
+            destination = Destination.Material3Basic,
         ),
         Demo(
             title = StringResources.material3_title_fade,
-            destination = Destination.PlaceholderMaterial3Fade,
+            destination = Destination.Material3Fade,
         ),
         Demo(
             title = StringResources.material3_title_shimmer,
-            destination = Destination.PlaceholderMaterial3Shimmer,
+            destination = Destination.Material3Shimmer,
         ),
     )
 
