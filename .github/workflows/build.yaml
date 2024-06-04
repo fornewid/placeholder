@@ -12,7 +12,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     timeout-minutes: 45
 
     steps:
@@ -35,20 +35,17 @@ jobs:
         with:
           gradle-home-cache-cleanup: true
 
-      - name: Check dependencyGuard
-        run: ./gradlew dependencyGuard
-
       - name: Check spotless
         run: ./gradlew spotlessCheck --init-script gradle/init.gradle.kts --stacktrace
 
       - name: Check metalava
         run: ./gradlew metalavaCheckCompatibilityRelease --stacktrace
 
-      - name: Check lint
-        run: ./gradlew lintDebug --stacktrace
+      - name: Build samples
+        run: ./gradlew :sample:android:assemble :sample:desktop:assemble
 
-      - name: Build all build type and flavor permutations
-        run: ./gradlew assemble --stacktrace
+      - name: Build iOS app
+        run: xcodebuild -project sample/iosApp/iosApp.xcodeproj -scheme iosApp -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest'
 
       - name: Clean secrets
         if: always()

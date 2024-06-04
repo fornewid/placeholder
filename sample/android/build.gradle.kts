@@ -1,7 +1,7 @@
 plugins {
     id("placeholder.android.application")
-    id("placeholder.android.compose")
-    alias(libs.plugins.dependencyGuard)
+    id("placeholder.kotlin.android")
+    id("placeholder.compose")
 }
 
 android {
@@ -22,28 +22,6 @@ android {
 }
 
 dependencies {
-    implementation(projects.foundation)
-    implementation(projects.material)
-    implementation(projects.material3)
-
-    implementation(libs.kotlin.stdlib)
-    implementation(libs.kotlinx.coroutines.android)
-
-    implementation(libs.compose.material.material)
-    implementation(libs.compose.material.iconsext)
-    implementation(libs.compose.material3.material3)
-    implementation(libs.compose.foundation.layout)
-    debugImplementation(libs.compose.ui.tooling)
-    implementation(libs.compose.ui.tooling.preview)
-    implementation(libs.compose.ui.util)
-
+    implementation(projects.sample.shared)
     implementation(libs.androidx.activity.compose)
-    implementation(libs.androidx.navigation.compose)
-
-    implementation(libs.coil.compose)
-}
-
-dependencyGuard {
-    // All dependencies included in Production Release APK
-    configuration("releaseRuntimeClasspath")
 }

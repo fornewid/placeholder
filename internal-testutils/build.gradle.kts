@@ -1,36 +1,23 @@
 plugins {
     id("placeholder.android.library")
-    id("placeholder.android.compose")
+    id("placeholder.kotlin.multiplatform")
+    id("placeholder.compose")
 }
 
 android {
     namespace = "io.github.fornewid.placeholder.internal.test"
-
-    buildFeatures {
-        buildConfig = false
-    }
-
-    lint {
-        textReport = true
-        textOutput = File("stdout")
-        // We run a full lint analysis as build part in CI, so skip vital checks for assemble tasks
-        checkReleaseBuilds = false
-    }
-    packaging {
-        // Certain libraries include licence files in their JARs. Exclude them to enable
-        // our test APK to build (has no effect on our AARs)
-        resources {
-            excludes += listOf("/META-INF/AL2.0", "/META-INF/LGPL2.1")
-        }
-    }
 }
 
-dependencies {
-    implementation(libs.kotlin.stdlib)
+kotlin {
+    sourceSets {
+        commonMain.dependencies {
+            implementation(compose.foundation)
+        }
+        androidMain.dependencies {
+            api(libs.compose.ui.test.junit4)
 
-    implementation(libs.compose.foundation.foundation)
-    api(libs.compose.ui.test.junit4)
-
-    api(libs.androidx.test.core)
-    implementation(libs.truth)
+            api(libs.androidx.test.core)
+            implementation(libs.truth)
+        }
+    }
 }

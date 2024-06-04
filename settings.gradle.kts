@@ -17,10 +17,12 @@ dependencyResolutionManagement {
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
+rootProject.name = "placeholder"
+
 include(":internal-testutils")
 include(":foundation")
 include(":material")
 include(":material3")
+include(":sample:shared")
 include(":sample:android")
-
-rootProject.name = "placeholder"
+include(":sample:desktop")

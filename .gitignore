@@ -46,3 +46,5 @@ package-list-coil-base
 docs-gen
 site
 *.bak
+
+.kotlin/
