@@ -19,7 +19,10 @@ If you're already using [accompanist][accompanist] placeholder, you can migrate 
   <td>Compose 1.5 (1.5.x)</td><td><img alt="Maven Central" src="https://img.shields.io/maven-central/v/io.github.fornewid/placeholder-foundation?versionPrefix=1.0"></td>
  </tr>
  <tr>
-  <td>Compose 1.6 (1.6.x)</td><td><img alt="Maven Central" src="https://img.shields.io/maven-central/v/io.github.fornewid/placeholder-foundation"></td>
+  <td>Compose 1.6 (1.6.x)</td><td><img alt="Maven Central" src="https://img.shields.io/maven-central/v/io.github.fornewid/placeholder-foundation?versionPrefix=1.1"></td>
+ </tr>
+ <tr>
+  <td>Compose Multiplatform 1.6.10</td><td><img alt="Maven Central" src="https://img.shields.io/maven-central/v/io.github.fornewid/placeholder-foundation"></td>
  </tr>
 </table>
 
